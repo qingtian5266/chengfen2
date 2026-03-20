@@ -24,6 +24,7 @@ const analyze_module_1 = require("./modules/analyze/analyze.module");
 const collect_module_1 = require("./modules/collect/collect.module");
 const history_module_1 = require("./modules/history/history.module");
 const feedback_module_1 = require("./modules/feedback/feedback.module");
+const additive_module_1 = require("./additive/additive.module");
 const user_entity_1 = require("./modules/users/user.entity");
 const wechat_user_entity_1 = require("./modules/wechat/wechat-user.entity");
 const product_entity_1 = require("./modules/product/product.entity");
@@ -32,6 +33,7 @@ const component_entity_1 = require("./modules/component/component.entity");
 const user_collect_entity_1 = require("./modules/collect/user-collect.entity");
 const user_history_entity_1 = require("./modules/history/user-history.entity");
 const user_feedback_entity_1 = require("./modules/feedback/user-feedback.entity");
+const additive_entity_1 = require("./additive/additive.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -60,6 +62,7 @@ exports.AppModule = AppModule = __decorate([
                         user_collect_entity_1.UserCollect,
                         user_history_entity_1.UserHistory,
                         user_feedback_entity_1.UserFeedback,
+                        additive_entity_1.Additive,
                     ],
                     synchronize: true,
                     logging: configService.get('NODE_ENV') === 'development',
@@ -88,6 +91,7 @@ exports.AppModule = AppModule = __decorate([
             collect_module_1.CollectModule,
             history_module_1.HistoryModule,
             feedback_module_1.FeedbackModule,
+            additive_module_1.AdditiveModule,
         ],
         providers: [
             {

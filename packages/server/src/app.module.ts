@@ -15,6 +15,7 @@ import { AnalyzeModule } from './modules/analyze/analyze.module';
 import { CollectModule } from './modules/collect/collect.module';
 import { HistoryModule } from './modules/history/history.module';
 import { FeedbackModule } from './modules/feedback/feedback.module';
+import { AdditiveModule } from './additive/additive.module';
 import { User } from './modules/users/user.entity';
 import { WechatUser } from './modules/wechat/wechat-user.entity';
 import { Product } from './modules/product/product.entity';
@@ -23,6 +24,7 @@ import { ComponentEntity } from './modules/component/component.entity';
 import { UserCollect } from './modules/collect/user-collect.entity';
 import { UserHistory } from './modules/history/user-history.entity';
 import { UserFeedback } from './modules/feedback/user-feedback.entity';
+import { Additive } from './additive/additive.entity';
 
 @Module({
   imports: [
@@ -48,6 +50,7 @@ import { UserFeedback } from './modules/feedback/user-feedback.entity';
           UserCollect,
           UserHistory,
           UserFeedback,
+          Additive,
         ],
         synchronize: true, // 生产环境改为 false
         logging: configService.get('NODE_ENV') === 'development',
@@ -76,6 +79,7 @@ import { UserFeedback } from './modules/feedback/user-feedback.entity';
     CollectModule,
     HistoryModule,
     FeedbackModule,
+    AdditiveModule,
   ],
   providers: [
     {
