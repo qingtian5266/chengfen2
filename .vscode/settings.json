@@ -1,0 +1,59 @@
+{
+  "stylelint.validate": ["css", "less", "vue", "postcss", "html"],
+  "prettier.useTabs": false,
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
+  "eslint.format.enable": false,
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": [
+    {
+      "pattern": "./packages/*"
+    }
+  ],
+  // 确保 ESLint 能正确识别 Vue 文件
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
+  },
+  "prettier.enable": true,
+  "prettier.requireConfig": false,
+  "prettier.configPath": ".prettierrc.json",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": ["pinia", "preinstall", "stylelint", "vueuse", "logicflow"],
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "i18n-ally.localesPaths": ["packages/i18n/lang"],
+  "i18n-ally.sourceLanguage": "zh-cn",
+  "i18n-ally.displayLanguage": "zh-cn",
+  "i18n-ally.keystyle": "nested",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "vue-i18n.i18nPaths": "packages\\i18n\\lang"
+}

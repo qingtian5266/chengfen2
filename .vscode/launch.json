@@ -1,0 +1,49 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      // 调试配置名称
+      "name": "Launch Works Main Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      /* 
+        启动参数配置：
+        - extensionDevelopmentPath: 插件开发路径
+        - disable-extensions: 禁用其他插件
+      */
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}/extensions/works/", "--disable-extensions"],
+      // 输出文件路径配置
+      "outFiles": ["${workspaceFolder}/extensions/works/dist/**/*.js"],
+      // 环境变量配置
+      "env": {
+        "VSCODE_DEBUG_MODE": "true" // 启用调试模式
+      },
+      // 添加以下配置
+      "sourceMaps": true,
+      "trace": true,
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      // 调试配置名称
+      "name": "Launch Works i18n Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      /* 
+        启动参数配置：
+        - extensionDevelopmentPath: 插件开发路径
+        - disable-extensions: 禁用其他插件
+      */
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}/extensions/i18n/", "--disable-extensions"],
+      // 输出文件路径配置
+      "outFiles": ["${workspaceFolder}/extensions/i18n/dist/**/*.js"],
+      // 环境变量配置
+      "env": {
+        "VSCODE_DEBUG_MODE": "true" // 启用调试模式
+      },
+      // 添加以下配置
+      "sourceMaps": true,
+      "trace": true,
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

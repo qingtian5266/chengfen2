@@ -1,0 +1,17 @@
+{
+    "name": "lawyer-monorepo",
+    "version": "0.0.0",
+    "author": "",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "preinstall": "npx only-allow pnpm",
+      "dev": "pnpm -r --parallel dev",
+      "dev:packages": "pnpm --filter \"./packages/*\" -r --parallel dev",
+      "dev:extensions": "pnpm --filter \"./extensions/*\" -r --parallel dev",
+      "build": "pnpm --filter \"./packages/*\" -r --parallel build"
+    },
+    "devDependencies": {
+    }
+  }
+  
