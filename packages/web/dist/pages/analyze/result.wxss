@@ -1,0 +1,1 @@
+.analyze-page{padding:20rpx}.analyze-page .summary{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:16rpx;color:#666}.analyze-page .risk-low{color:#3fbb46}.analyze-page .risk-medium{color:#ff9f00}.analyze-page .risk-high{color:#fa2c19}

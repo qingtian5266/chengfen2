@@ -23,14 +23,17 @@ let WechatController = class WechatController {
     async login(dto) {
         return this.wechatService.login(dto);
     }
-    async list(dto) {
-        return this.wechatService.list(dto);
+    async list() {
+        return this.wechatService.list();
     }
     async detail(dto) {
         return this.wechatService.detail(dto.id);
     }
     async detailByOpenid(dto) {
         return this.wechatService.detailByOpenid(dto.openid);
+    }
+    async delete(dto) {
+        return this.wechatService.delete(dto.id);
     }
 };
 exports.WechatController = WechatController;
@@ -44,9 +47,8 @@ __decorate([
 __decorate([
     (0, common_1.Post)('list'),
     (0, common_1.UseGuards)(jwt_guard_1.JwtGuard),
-    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], WechatController.prototype, "list", null);
 __decorate([
@@ -65,6 +67,14 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], WechatController.prototype, "detailByOpenid", null);
+__decorate([
+    (0, common_1.Post)('delete'),
+    (0, common_1.UseGuards)(jwt_guard_1.JwtGuard),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], WechatController.prototype, "delete", null);
 exports.WechatController = WechatController = __decorate([
     (0, common_1.Controller)('wechat'),
     __metadata("design:paramtypes", [wechat_service_1.WechatService])

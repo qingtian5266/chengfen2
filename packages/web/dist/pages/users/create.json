@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "创建用户",
+  "usingComponents": {
+    "comp": "../../comp"
+  }
+}

@@ -16,12 +16,12 @@ export class WechatController {
   }
 
   /**
-   * 获取微信用户列表（需要 JWT 认证）
+   * 获取微信用户列表（需要 JWT 认证，返回全部数据）
    */
   @Post('list')
   @UseGuards(JwtGuard)
-  async list(@Body() dto: { page?: number; pageSize?: number; keyword?: string }) {
-    return this.wechatService.list(dto);
+  async list() {
+    return this.wechatService.list();
   }
 
   /**
@@ -40,5 +40,14 @@ export class WechatController {
   @UseGuards(JwtGuard)
   async detailByOpenid(@Body() dto: { openid: string }) {
     return this.wechatService.detailByOpenid(dto.openid);
+  }
+
+  /**
+   * 删除微信用户（需要 JWT 认证）
+   */
+  @Post('delete')
+  @UseGuards(JwtGuard)
+  async delete(@Body() dto: { id: number }) {
+    return this.wechatService.delete(dto.id);
   }
 }

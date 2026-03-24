@@ -1,0 +1,540 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "TnKdP",
+      "x": 880,
+      "y": 0,
+      "name": "食品详情",
+      "clip": true,
+      "width": 390,
+      "fill": "#F4F6F8",
+      "layout": "vertical",
+      "gap": 12,
+      "children": [
+        {
+          "type": "frame",
+          "id": "oRNhC",
+          "name": "topSection",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": [
+            0,
+            0,
+            20,
+            20
+          ],
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            12,
+            16,
+            16,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "0AX8Q",
+              "name": "productRow",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wboSZ",
+                  "name": "productImage",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "tobiastu",
+                    "link": "https://unsplash.com/@tobiastu",
+                    "author": "Tobias Tullius"
+                  },
+                  "width": 146,
+                  "height": 146,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1590856029930-218a3976fb17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzQzMjA3NTB8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "9JPqK",
+                  "name": "healthCard",
+                  "width": "fill_container",
+                  "height": 120,
+                  "fill": "#FFFDF8",
+                  "cornerRadius": 14,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#F3D9A6"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S6dRr",
+                      "name": "healthEmoji",
+                      "fill": "#F0C46A",
+                      "content": "🙂",
+                      "fontFamily": "Inter",
+                      "fontSize": 34,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6o3fy",
+                      "name": "healthText",
+                      "fill": "#7E8796",
+                      "content": "适量食用",
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "3VUG3",
+              "name": "productName",
+              "fill": "#1D2740",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "中粮梅林午餐肉罐头",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "X9Vma",
+              "name": "metaText",
+              "fill": "#7A8394",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "品牌：梅林   规格：340g",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "1PRsq",
+              "name": "tagsRow",
+              "width": "fill_container",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "9ZK8T",
+                  "name": "tag1",
+                  "fill": "#FFF5DF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    6,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qP7cZ",
+                      "name": "tag1Text",
+                      "fill": "#E7B95A",
+                      "content": "高脂肪",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zI6bQ",
+                  "name": "tag2",
+                  "fill": "#EAF9FF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    6,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wZeo6",
+                      "name": "tag2Text",
+                      "fill": "#5DB7E3",
+                      "content": "无人工甜味剂",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4JybJ",
+                  "name": "tag3",
+                  "fill": "#EAF9FF",
+                  "cornerRadius": 999,
+                  "padding": [
+                    6,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3pjvn",
+                      "name": "tag3Text",
+                      "fill": "#5DB7E3",
+                      "content": "无人工色素",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BZxeB",
+          "name": "ingredientsCard",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 16,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "besdB",
+              "name": "ingHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jvalQ",
+                  "name": "ingTitle",
+                  "fill": "#1F2636",
+                  "content": "配料表",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Rdv6S",
+                  "name": "ingAction",
+                  "fill": "#67C2F1",
+                  "content": "健康关注设置 ›",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4tYrG",
+              "name": "ingTextWrap",
+              "width": "fill_container",
+              "fill": "#F4F8FC",
+              "cornerRadius": 10,
+              "layout": "vertical",
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8eEOP",
+                  "name": "ingText",
+                  "fill": "#4E5766",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "配料：猪肉、水、淀粉、大豆蛋白、食用盐、白砂糖、香辛料、味精、卡拉胶、三聚磷酸钠、焦磷酸钠……",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qEWBD",
+              "name": "riskCard",
+              "width": "fill_container",
+              "fill": "#F8FBFF",
+              "cornerRadius": 10,
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yloIA",
+                  "name": "riskTitle",
+                  "fill": "#6E7789",
+                  "content": "发现高风险成分",
+                  "fontFamily": "Inter",
+                  "fontSize": 19,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "lQDAQ",
+                  "name": "riskRow",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jTzYe",
+                      "name": "row1",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "RYIJ9",
+                          "name": "riskChip1",
+                          "fill": "#EAF7FF",
+                          "cornerRadius": 999,
+                          "padding": [
+                            6,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lYRX4",
+                              "name": "riskChip1Text",
+                              "fill": "#68BDE8",
+                              "content": "亚硝酸钠",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "R7hYu",
+                          "name": "riskChip2",
+                          "fill": "#FFF0F0",
+                          "cornerRadius": 999,
+                          "padding": [
+                            6,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LvamL",
+                              "name": "riskChip2Text",
+                              "fill": "#EF6B6B",
+                              "content": "D",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rCtcm",
+                      "name": "row2",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nCwUv",
+                          "name": "riskChip3",
+                          "fill": "#F4F6F8",
+                          "cornerRadius": 999,
+                          "padding": [
+                            6,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8H8e4",
+                              "name": "riskChip3Text",
+                              "fill": "#6E7789",
+                              "content": "绿色食品禁用",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "BU6LI",
+                          "name": "riskChip4",
+                          "fill": "#FFF0F0",
+                          "cornerRadius": 999,
+                          "padding": [
+                            6,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "tMERC",
+                              "name": "riskChip4Text",
+                              "fill": "#EF6B6B",
+                              "content": "2类致癌物",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cbcjn",
+              "name": "analyzeBtn",
+              "width": 301,
+              "height": 42,
+              "fill": "#D7F0FF",
+              "cornerRadius": 999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cSUfa",
+                  "name": "analyzeText",
+                  "fill": "#4CAFE3",
+                  "content": "全部成分解读",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qCFnk",
+          "name": "nutritionCard",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "cornerRadius": 16,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "fU01g",
+              "name": "nutHeader",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nuoMQ",
+                  "name": "nutTitle",
+                  "fill": "#1F2636",
+                  "content": "营养成分表",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "wzJOh",
+                  "name": "nutMark",
+                  "fill": "#96A0B0",
+                  "content": "每罐 340克",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LEaMh",
+              "name": "nutBody",
+              "width": "fill_container",
+              "fill": "#F4F7FB",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                12,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8vl1e",
+                  "name": "nutValue",
+                  "fill": "#3B4558",
+                  "content": "302千卡 / 1264千焦",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "QIlXC",
+                  "name": "nutSub",
+                  "fill": "#8A93A3",
+                  "content": "相当于行走11268步",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

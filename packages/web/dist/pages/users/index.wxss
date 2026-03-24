@@ -1,0 +1,1 @@
+.users-page{padding:20rpx}.users-page .header{margin-bottom:20rpx}.users-page .user-info{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;gap:10rpx}.users-page .user-info .role{font-size:12rpx;color:#999}

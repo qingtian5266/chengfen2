@@ -124,38 +124,28 @@ let WechatService = class WechatService {
             },
         };
     }
-    async list(dto) {
-        const page = dto.page || 1;
-        const pageSize = dto.pageSize || 20;
-        const skip = (page - 1) * pageSize;
-        const where = { status: 1 };
-        if (dto.keyword) {
-            where.nickname = { like: `%${dto.keyword}%` };
-        }
-        const [users, total] = await this.wechatUserRepository.findAndCount({
-            where,
+    async list() {
+        const users = await this.wechatUserRepository.find({
+            where: { status: 1 },
             order: { created_at: 'DESC' },
-            skip,
-            take: pageSize,
         });
-        return {
-            list: users.map(user => ({
-                id: user.id,
-                openid: user.openid,
-                nickname: user.nickname,
-                avatar: user.avatar,
-                sex: user.sex,
-                phone: user.phone,
-                province: user.province,
-                city: user.city,
-                role: user.role,
-                last_login_at: user.last_login_at,
-                created_at: user.created_at,
-            })),
-            total,
-            page,
-            pageSize,
-        };
+        return users.map(user => ({
+            id: user.id,
+            openid: user.openid,
+            unionid: user.unionid,
+            nickname: user.nickname,
+            sex: user.sex,
+            province: user.province,
+            city: user.city,
+            country: user.country,
+            avatar: user.avatar,
+            phone: user.phone,
+            role: user.role,
+            status: user.status,
+            last_login_at: user.last_login_at,
+            created_at: user.created_at,
+            updated_at: user.updated_at,
+        }));
     }
     async detail(id) {
         const user = await this.wechatUserRepository.findOne({
@@ -206,6 +196,17 @@ let WechatService = class WechatService {
             created_at: user.created_at,
             updated_at: user.updated_at,
         };
+    }
+    async delete(id) {
+        const user = await this.wechatUserRepository.findOne({
+            where: { id },
+        });
+        if (!user) {
+            throw new common_1.UnauthorizedException('用户不存在');
+        }
+        user.status = 0;
+        await this.wechatUserRepository.save(user);
+        return { success: true };
     }
     async generateToken(user) {
         return this.jwtService.signAsync({

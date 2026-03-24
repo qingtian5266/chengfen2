@@ -5,6 +5,8 @@ export default {
     'pages/recognition/index',
     'pages/analyze/result',
     'pages/product/detail',
+    'pages/food/element',
+    'pages/food/detail',
     'pages/component/detail',
     'pages/mine/index',
     'pages/collect/index',

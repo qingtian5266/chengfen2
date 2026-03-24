@@ -120,44 +120,31 @@ export class WechatService {
   }
 
   /**
-   * 获取微信用户列表
+   * 获取微信用户列表（返回全部数据，无分页）
    */
-  async list(dto: { page?: number; pageSize?: number; keyword?: string }) {
-    const page = dto.page || 1;
-    const pageSize = dto.pageSize || 20;
-    const skip = (page - 1) * pageSize;
-
-    const where: any = { status: 1 };
-    
-    if (dto.keyword) {
-      where.nickname = { like: `%${dto.keyword}%` };
-    }
-
-    const [users, total] = await this.wechatUserRepository.findAndCount({
-      where,
+  async list() {
+    const users = await this.wechatUserRepository.find({
+      where: { status: 1 },
       order: { created_at: 'DESC' },
-      skip,
-      take: pageSize,
     });
 
-    return {
-      list: users.map(user => ({
-        id: user.id,
-        openid: user.openid,
-        nickname: user.nickname,
-        avatar: user.avatar,
-        sex: user.sex,
-        phone: user.phone,
-        province: user.province,
-        city: user.city,
-        role: user.role,
-        last_login_at: user.last_login_at,
-        created_at: user.created_at,
-      })),
-      total,
-      page,
-      pageSize,
-    };
+    return users.map(user => ({
+      id: user.id,
+      openid: user.openid,
+      unionid: user.unionid,
+      nickname: user.nickname,
+      sex: user.sex,
+      province: user.province,
+      city: user.city,
+      country: user.country,
+      avatar: user.avatar,
+      phone: user.phone,
+      role: user.role,
+      status: user.status,
+      last_login_at: user.last_login_at,
+      created_at: user.created_at,
+      updated_at: user.updated_at,
+    }));
   }
 
   /**
@@ -220,6 +207,24 @@ export class WechatService {
       created_at: user.created_at,
       updated_at: user.updated_at,
     };
+  }
+
+  /**
+   * 删除微信用户（软删除）
+   */
+  async delete(id: number) {
+    const user = await this.wechatUserRepository.findOne({
+      where: { id },
+    });
+
+    if (!user) {
+      throw new UnauthorizedException('用户不存在');
+    }
+
+    user.status = 0;
+    await this.wechatUserRepository.save(user);
+
+    return { success: true };
   }
 
   private async generateToken(user: WechatUser): Promise<string> {
